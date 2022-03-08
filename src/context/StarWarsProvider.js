@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import StarWarsContext from './StarWarsContext';
-import { getPlanets } from '../services/getPlanets';
+import getPlanets from '../services/getPlanets';
 
 function StarWarsProvider({ children }) {
   const [planets, setPlanets] = useState([]);
 
-  const globalState = {
+  const starWarsState = {
     planets,
   };
 
@@ -16,7 +16,7 @@ function StarWarsProvider({ children }) {
   }, []);
 
   return (
-    <StarWarsContext.Provider value={ globalState }>
+    <StarWarsContext.Provider value={ starWarsState }>
       { children }
     </StarWarsContext.Provider>
   );
