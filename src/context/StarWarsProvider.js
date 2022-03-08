@@ -5,14 +5,14 @@ import StarWarsContext from './StarWarsContext';
 import getPlanets from '../services/getPlanets';
 
 function StarWarsProvider({ children }) {
-  const [planets, setPlanets] = useState([]);
+  const [data, setdata] = useState([]);
 
   const starWarsState = {
-    planets,
+    data,
   };
 
   useEffect(() => {
-    getPlanets().then((data) => setPlanets(data.results));
+    getPlanets().then(({ results }) => setdata(results));
   }, []);
 
   return (
