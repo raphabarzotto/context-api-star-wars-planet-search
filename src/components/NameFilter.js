@@ -4,8 +4,8 @@ function NameFilter() {
   return (
     <label htmlFor="name-filter">
       <input
-        id="name-filter"
         type="text"
+        id="name-filter"
         data-testid="name-filter"
         placeholder="Filtrar por nome"
       />

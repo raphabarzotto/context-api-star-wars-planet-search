@@ -6,9 +6,12 @@ import getPlanets from '../services/getPlanets';
 
 function StarWarsProvider({ children }) {
   const [data, setData] = useState([]);
+  const [filterByName, setFilterByName] = useState({ name: '' });
 
   const starWarsState = {
     data,
+    filterByName,
+    setFilterByName,
   };
 
   useEffect(() => {
