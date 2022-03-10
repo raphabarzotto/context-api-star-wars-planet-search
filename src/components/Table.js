@@ -4,8 +4,7 @@ import StarWarsContext from '../context/StarWarsContext';
 import tableOptions from '../services/tableOptions';
 
 function Table() {
-  const { data, filterByName } = useContext(StarWarsContext);
-  const nameToFilter = filterByName.name;
+  const { filteredData } = useContext(StarWarsContext);
   return (
     <table>
       <thead>
@@ -15,7 +14,7 @@ function Table() {
       </thead>
       <tbody>
         {
-          data.filter(({ name }) => name.includes(nameToFilter)).map((planet, index) => (
+          filteredData.map((planet, index) => (
             <tr key={ index }>
               <td>{ planet.name }</td>
               <td>{ planet.rotation_period }</td>
