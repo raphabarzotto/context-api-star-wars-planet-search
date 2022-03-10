@@ -13,15 +13,19 @@ function FilterByNumericValueForm() {
     setComparisonFilter,
     valueFilter,
     setValueFilter,
+    filterByNumericValues,
     setFilterByNumericValues,
   } = useContext(StarWarsContext);
 
   const handleClick = () => {
-    setFilterByNumericValues({
-      column: columnFilter,
-      comparison: comparisonFilter,
-      value: valueFilter,
-    });
+    setFilterByNumericValues([
+      ...filterByNumericValues,
+      {
+        column: columnFilter,
+        comparison: comparisonFilter,
+        value: valueFilter,
+      },
+    ]);
     if (comparisonFilter === 'maior que') {
       setFilteredData(
         data.filter((planet) => parseInt(planet[columnFilter], 10) > valueFilter),
@@ -45,7 +49,12 @@ function FilterByNumericValueForm() {
           onChange={ ({ target }) => setColumnFilter(target.value) }
         >
           {
-            numericSortOptions.map((option) => <option key={ option }>{ option }</option>)
+            numericSortOptions.map((option) => {
+              if (filterByNumericValues.some((value) => value.column === option)) {
+                return null;
+              }
+              return <option key={ option }>{ option }</option>;
+            })
           }
         </select>
       </label>
