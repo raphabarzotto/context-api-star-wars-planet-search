@@ -6,6 +6,7 @@ import numericSortOptions from '../services/numericSortOptions';
 function FilterByNumericValueForm() {
   const {
     data,
+    filteredData,
     setFilteredData,
     columnFilter,
     setColumnFilter,
@@ -18,6 +19,7 @@ function FilterByNumericValueForm() {
   } = useContext(StarWarsContext);
 
   const handleClick = () => {
+    setFilteredData(data);
     setFilterByNumericValues([
       ...filterByNumericValues,
       {
@@ -28,14 +30,14 @@ function FilterByNumericValueForm() {
     ]);
     if (comparisonFilter === 'maior que') {
       setFilteredData(
-        data.filter((planet) => parseInt(planet[columnFilter], 10) > valueFilter),
+        filteredData.filter((planet) => parseInt(planet[columnFilter], 10) > valueFilter),
       );
     } else if (comparisonFilter === 'menor que') {
       setFilteredData(
-        data.filter((planet) => parseInt(planet[columnFilter], 10) < valueFilter),
+        filteredData.filter((planet) => parseInt(planet[columnFilter], 10) < valueFilter),
       );
     } else {
-      setFilteredData(data.filter((planet) => planet[columnFilter] === valueFilter));
+      setFilteredData(filteredData.filter((planet) => planet[columnFilter] === valueFilter));
     }
   };
 
