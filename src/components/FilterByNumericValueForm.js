@@ -37,7 +37,9 @@ function FilterByNumericValueForm() {
         filteredData.filter((planet) => parseInt(planet[columnFilter], 10) < valueFilter),
       );
     } else {
-      setFilteredData(filteredData.filter((planet) => planet[columnFilter] === valueFilter));
+      setFilteredData(
+        filteredData.filter((planet) => planet[columnFilter] === valueFilter),
+      );
     }
   };
 
