@@ -1,13 +1,12 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Context API Star Wars Planet Search
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+- In this project, I developed a simple filter for Star Wars planets
+- Used the free API https://swapi.dev/api/planets to get planets data
+- Project was made in March 2022 as a part of [Trybe's Front-end Course](https://www.betrybe.com/)
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Project features and images
+- Single page showing a table with data from the Star Wars planets project
+- Name and data filters
+![landing page](./images/basic.png "landing page")
+![search filter](./images/search%20filter.png "search filter")
+![filter by](./images/rotational%20period%20filter.png "filter by")

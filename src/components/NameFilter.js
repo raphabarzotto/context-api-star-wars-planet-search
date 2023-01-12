@@ -20,8 +20,9 @@ function NameFilter() {
       <input
         type="text"
         id="name-filter"
+        className="form-input"
         data-testid="name-filter"
-        placeholder="Filtrar por nome"
+        placeholder="Search By Name"
         onChange={ ({ target }) => handleChange({ target }) }
         value={ filterByName.name }
       />

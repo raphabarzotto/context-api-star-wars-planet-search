@@ -49,9 +49,11 @@ function FilterByNumericValueForm() {
         <select
           id="column-filter"
           data-testid="column-filter"
+          className="form-input"
           value={ columnFilter }
           onChange={ ({ target }) => setColumnFilter(target.value) }
         >
+          <option value="" disabled selected>Filter By</option>
           {
             numericSortOptions.map((option) => {
               if (filterByNumericValues.some((value) => value.column === option)) {
@@ -67,12 +69,13 @@ function FilterByNumericValueForm() {
         <select
           id="comparison-filter"
           data-testid="comparison-filter"
+          className="form-input"
           value={ comparisonFilter }
           onChange={ ({ target }) => setComparisonFilter(target.value) }
         >
-          <option>maior que</option>
-          <option>menor que</option>
-          <option>igual a</option>
+          <option>Greater Than</option>
+          <option>Less Than</option>
+          <option>Equal to</option>
         </select>
       </label>
 
@@ -80,17 +83,20 @@ function FilterByNumericValueForm() {
         <input
           id="value-filter"
           data-testid="value-filter"
+          className="form-input"
           type="number"
           value={ valueFilter }
           onChange={ ({ target }) => setValueFilter(target.value) }
         />
       </label>
+
       <button
         data-testid="button-filter"
         type="button"
+        className="form-button"
         onClick={ () => handleClick() }
       >
-        Filtrar
+        Filter
       </button>
     </form>
   );

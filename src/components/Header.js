@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
   return (
     <header>
-      <h1>Projeto Star Wars</h1>
+      <h1>Star Wars Planet Search</h1>
     </header>
   );
 }
