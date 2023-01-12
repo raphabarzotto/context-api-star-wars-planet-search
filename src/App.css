@@ -41,6 +41,26 @@ td {
   padding-right: 5%;
 }
 
-.light-grey-line{
-  background: #dadada;
+.form-wrap {
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input{
+  border: 1px solid #eeeeee;
+  padding: 12px;
+}
+
+.form-input:hover{
+  border: 1px solid #eeeeee;
+}
+
+.form-button{
+  border: 1px solid #ddd;
+  color: #ffffff;
+  padding: 10px;
+  text-transform: uppercase;
 }

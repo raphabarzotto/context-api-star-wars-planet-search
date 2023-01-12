@@ -12,8 +12,10 @@ function App() {
   return (
     <StarWarsProvider>
       <Header />
-      <NameFilter />
-      <FilterByNumericValueForm />
+      <div className="form-wrap">
+        <NameFilter />
+        <FilterByNumericValueForm />
+      </div>
       <Table />
     </StarWarsProvider>
   );
